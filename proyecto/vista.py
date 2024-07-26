@@ -6,7 +6,7 @@ class Vista:
         self.controlador = controlador
 
         self.root = tk.Tk()
-        self.root.title("Gestión de Archivos JSON")
+        self.root.title("Gestión de Archivos")
 
         self.frame = tk.Frame(self.root)
         self.frame.pack(pady=20)
@@ -39,7 +39,7 @@ class Vista:
             messagebox.showwarning("Advertencia", "Todos los campos son obligatorios.")
 
     def leer_archivo(self):
-        nombre_archivo = simpledialog.askstring("Entrada", "Escriba el nombre del archivo a leer (sin .json):")
+        nombre_archivo = simpledialog.askstring("Entrada", "Escriba el nombre del archivo a leer (sin .txt):")
         if nombre_archivo:
             datos = self.controlador.leer_archivo(nombre_archivo)
             if datos:
